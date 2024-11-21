@@ -81,6 +81,7 @@ public class Algebra {
         while (times(i, i) <= x) {
             i++;
         }
-        return i - 1;
+		i-= 1;
+        return i;
 	}	  	  
 }
