@@ -32,7 +32,7 @@ public class Algebra {
 			}
 		} else if (x2 < 0){
 			for (int i = 0; i > x2; i--){
-				x1++;
+				x1--;
 			}
 		}
 		
@@ -47,7 +47,7 @@ public class Algebra {
 			}
 		} else if (x2 < 0){
 			for (int i = 0; i > x2; i--){
-				x1--;
+				x1++;
 			}
 		}
 		
@@ -57,8 +57,14 @@ public class Algebra {
 	// Returns x1 * x2
 	public static int times(int x1, int x2) {
 		int result = 0;
-		for (int i = 0; i < x2; i++){
-			result += x1;
+		if (x2 > 0){
+			for (int i = 0; i < x2; i++){
+				result += x1;
+			}
+		} else if (x2 < 0){
+			for (int i = 0; i > x2; i--) {
+				result -= x1;
+			}
 		}
 		return result;
 	}
